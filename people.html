@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>People &#8212; Nengo</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/components.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/nengo.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+<script type="text/javascript" src="https://cdn.crate.io/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/modernizr.js"></script>
+    <script type="text/javascript" src="_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/searchtools.js"></script>
+    <script type="text/javascript" src="_static/js/webflow.js"></script>
+    <script type="text/javascript" src="_static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="_static/js/mmenu.all.min.js"></script>
+    <script type="text/javascript" src="_static/js/fontawesome.js"></script>
+    <script type="text/javascript" src="_static/js/custom.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<link rel="stylesheet" type="text/css" href="_static/custom.css">
+
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+<header class="header-nav">
+  <div class="container">
+    <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
+      <a class="brand w-nav-brand" href="https://www.nengo.ai/">
+        <img src="https://www.nengo.ai/design/_images/general-full-light.svg" width="120">
+      </a>
+      <nav class="w-nav-menu main-nav" role="navigation">
+        <div class="dropdownBackground">
+          <span class="arrow"></span>
+        </div>
+        <ul id="menu-top-navigation" class="menu">
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/overview.html">Overview</a>
+            <ul class="sub-menu">
+                <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
+            <table class="sub-menu">
+              <tr>
+                <td class="menu-heading">Core</td>
+                <td class="menu-heading">Backends</td>
+                <td class="menu-heading">Add-ons</td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo">Nengo</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-fpga">Nengo FPGA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-examples">Nengo Examples</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-dl/">Nengo DL</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-loihi">Nengo Loihi</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-extras/">Nengo Extras</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-gui">Nengo GUI</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-mpi">Nengo MPI</a></td>
+                <td class="menu-item"><a href="https://arvoelke.github.io/nengolib-docs/">Nengo Lib</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-spa/">Nengo SPA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-ocl">Nengo OpenCL</a></td>
+                <td class="menu-item"></td>
+              </tr>
+              <tr>
+                <td class="menu-item"></td>
+                <td class="menu-item"><a href="https://github.com/project-rig/nengo_spinnaker">Nengo SpiNNaker</a></td>
+                <td class="menu-item"></td>
+              </tr>
+            </table>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/community.html">Community</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/publications.html">Publications</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/videos.html">Videos</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/projects.html">Development</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
+        </ul>
+      </nav>
+
+      <div id="mobile-nav" class="mm-menu">
+        <ul class="offcanvas-menu">
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/overview.html">Overview</a></li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
+              <li class="menu-item"><a href="http://www.nengo.ai/nengo">NengoCore</a></li>
+              <li class="menu-item"><a href="https://github.com/nengo/nengo-gui#nengo-gui">NengoGUI</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/community.html">Community</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/projects.html">Development</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
+        </ul>
+      </div>
+
+      <a href="#mobile-nav" class="fa fa-bars mobile-nav-button"></a>
+    </div>
+  </div>
+</header>
+
+<div class="w-section section border-top">
+  <div class="container">
+    <div class="row" id="people">
+      <div class="col-md-4 col-lg-3">
+        <aside class="wrapper-navleft">
+          
+        </aside>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <div class="wrapper-content-right">
+          
+          
+  <div class="section" id="people">
+<h1>People<a class="headerlink" href="#people" title="Permalink to this headline">¶</a></h1>
+<p>Nengo is made by a team of awesome people.
+Thanks to everyone who has made a contribution!</p>
+<p>The alphabetically sorted list below
+includes everyone who has contributed to a Nengo-managed project;
+not everyone on this list
+<a class="reference external" href="https://github.com/orgs/nengo/teams/active-contributors">is still active</a>.
+If you want to contact someone about a Nengo project,
+please contact the <a class="reference internal" href="projects.html#nengo-ecosystem"><span class="std std-ref">project maintainer</span></a>.</p>
+<p>By adding your name to this file, you are agreeing to the
+<a class="reference external" href="https://www.nengo.ai/caa.html">Nengo Contributor Assignment Agreement</a>.</p>
+<ul class="simple">
+<li>Aaron Voelker &lt;<a class="reference external" href="mailto:arvoelke&#37;&#52;&#48;gmail&#46;com">arvoelke<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Allen Wang &lt;<a class="reference external" href="mailto:allen&#46;houze&#46;wang&#37;&#52;&#48;gmail&#46;com">allen<span>&#46;</span>houze<span>&#46;</span>wang<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Andreas Stöckel &lt;<a class="reference external" href="mailto:andreas&#46;stoeckel&#37;&#52;&#48;gmail&#46;com">andreas<span>&#46;</span>stoeckel<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Andrew Mundy &lt;<a class="reference external" href="mailto:andrew&#46;mundy&#37;&#52;&#48;ieee&#46;org">andrew<span>&#46;</span>mundy<span>&#64;</span>ieee<span>&#46;</span>org</a>&gt;</li>
+<li>Ben Morcos &lt;<a class="reference external" href="mailto:morcos&#46;ben&#37;&#52;&#48;gmail&#46;com">morcos<span>&#46;</span>ben<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Brent Komer &lt;<a class="reference external" href="mailto:brent&#46;komer&#37;&#52;&#48;gmail&#46;com">brent<span>&#46;</span>komer<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Bryan Tripp &lt;<a class="reference external" href="mailto:bptripp&#37;&#52;&#48;uwaterloo&#46;ca">bptripp<span>&#64;</span>uwaterloo<span>&#46;</span>ca</a>&gt;</li>
+<li>Chris Eliasmith &lt;<a class="reference external" href="mailto:celiasmith&#37;&#52;&#48;uwaterloo&#46;ca">celiasmith<span>&#64;</span>uwaterloo<span>&#46;</span>ca</a>&gt;</li>
+<li>Christopher Chan &lt;<a class="reference external" href="mailto:c88chan&#37;&#52;&#48;uwaterloo&#46;ca">c88chan<span>&#64;</span>uwaterloo<span>&#46;</span>ca</a>&gt;</li>
+<li>Colin Cooke &lt;<a class="reference external" href="mailto:clvcooke&#37;&#52;&#48;uwaterloo&#46;ca">clvcooke<span>&#64;</span>uwaterloo<span>&#46;</span>ca</a>&gt;</li>
+<li>Daniel Rasmussen &lt;<a class="reference external" href="mailto:dhrsmss&#37;&#52;&#48;gmail&#46;com">dhrsmss<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Eric Crawford &lt;<a class="reference external" href="mailto:eric&#46;crawford&#37;&#52;&#48;mail&#46;mcgill&#46;ca">eric<span>&#46;</span>crawford<span>&#64;</span>mail<span>&#46;</span>mcgill<span>&#46;</span>ca</a>&gt;</li>
+<li>Eric Hunsberger &lt;<a class="reference external" href="mailto:erichuns&#37;&#52;&#48;gmail&#46;com">erichuns<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Ivana Kajić &lt;<a class="reference external" href="mailto:ivana&#46;kajic&#37;&#52;&#48;gmail&#46;com">ivana<span>&#46;</span>kajic<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>James Bergstra &lt;<a class="reference external" href="mailto:james&#46;bergstra&#37;&#52;&#48;gmail&#46;com">james<span>&#46;</span>bergstra<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Jan Gosmann &lt;<a class="reference external" href="mailto:jan&#37;&#52;&#48;hyper-world&#46;de">jan<span>&#64;</span>hyper-world<span>&#46;</span>de</a>&gt;</li>
+<li>&#64;luzpaz &lt;<a class="reference external" href="mailto:luzpaz&#37;&#52;&#48;users&#46;noreply&#46;github&#46;com">luzpaz<span>&#64;</span>users<span>&#46;</span>noreply<span>&#46;</span>github<span>&#46;</span>com</a>&gt;</li>
+<li>Ménélik Vero &lt;<a class="reference external" href="mailto:menelik&#46;vero&#37;&#52;&#48;tum&#46;de">menelik<span>&#46;</span>vero<span>&#64;</span>tum<span>&#46;</span>de</a>&gt;</li>
+<li>Oliver Trujillo &lt;<a class="reference external" href="mailto:olivertgp&#37;&#52;&#48;hotmail&#46;com">olivertgp<span>&#64;</span>hotmail<span>&#46;</span>com</a>&gt;</li>
+<li>Peter Blouw &lt;<a class="reference external" href="mailto:pblouw&#37;&#52;&#48;uwaterloo&#46;ca">pblouw<span>&#64;</span>uwaterloo<span>&#46;</span>ca</a>&gt;</li>
+<li>Peter Suma &lt;<a class="reference external" href="mailto:psuma&#37;&#52;&#48;waterloo&#46;ca">psuma<span>&#64;</span>waterloo<span>&#46;</span>ca</a>&gt;</li>
+<li>Petrut Bogdan &lt;<a class="reference external" href="mailto:petrutantoniu8&#37;&#52;&#48;gmail&#46;com">petrutantoniu8<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Rees Simmons &lt;<a class="reference external" href="mailto:rsimmons&#37;&#52;&#48;uwaterloo&#46;ca">rsimmons<span>&#64;</span>uwaterloo<span>&#46;</span>ca</a>&gt;</li>
+<li>Rocha Leonardo M &lt;leo(dot)m(dot)rocha&#64;gmail.com&gt;</li>
+<li>Sean Aubin &lt;<a class="reference external" href="mailto:seanaubin&#37;&#52;&#48;gmail&#46;com">seanaubin<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Shaun Ren &lt;<a class="reference external" href="mailto:shaun&#46;ren&#37;&#52;&#48;linux&#46;com">shaun<span>&#46;</span>ren<span>&#64;</span>linux<span>&#46;</span>com</a>&gt;</li>
+<li>Sugandha Sharma &lt;<a class="reference external" href="mailto:sugandha974&#37;&#52;&#48;gmail&#46;com">sugandha974<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Terry Stewart &lt;<a class="reference external" href="mailto:terry&#46;stewart&#37;&#52;&#48;gmail&#46;com">terry<span>&#46;</span>stewart<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Travis DeWolf &lt;<a class="reference external" href="mailto:travis&#46;dewolf&#37;&#52;&#48;gmail&#46;com">travis<span>&#46;</span>dewolf<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Trevor Bekolay &lt;<a class="reference external" href="mailto:tbekolay&#37;&#52;&#48;gmail&#46;com">tbekolay<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Xuan Choo &lt;<a class="reference external" href="mailto:xchoo&#46;mainframe&#37;&#52;&#48;gmail&#46;com">xchoo<span>&#46;</span>mainframe<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Youssef Zaky &lt;<a class="reference external" href="mailto:youssefzaky&#37;&#52;&#48;gmail&#46;com">youssefzaky<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</li>
+<li>Ziying Zhang &lt;<a class="reference external" href="mailto:zy8zhang&#37;&#52;&#48;uwaterloo&#46;ca">zy8zhang<span>&#64;</span>uwaterloo<span>&#46;</span>ca</a>&gt;</li>
+</ul>
+<div class="section" id="financial-support">
+<h2>Financial support<a class="headerlink" href="#financial-support" title="Permalink to this headline">¶</a></h2>
+<p>While Nengo is now
+an Applied Brain Research product,
+it would not exist without
+earlier versions that were
+generously supported by the following organizations.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.chairs-chaires.gc.ca/home-accueil-eng.aspx">Canada Research Chairs</a></li>
+<li><a class="reference external" href="http://www.innovation.ca/en">Canada Foundation for Innovation</a></li>
+<li><a class="reference external" href="http://www.nserc.ca/">National Sciences and Research Council (NSERC)</a></li>
+<li><a class="reference external" href="http://www.oit.on.ca/Pages/Home.html">Ontario Innovation Trust (OIT)</a></li>
+<li><a class="reference external" href="http://www.sharcnet.ca/">SHARCNET</a></li>
+</ul>
+</div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer">
+  <div class="w-container">
+    <div class="w-clearfix">
+      <div class="w-row mobileAlign">
+        <div class="w-col w-col-2 footer-menu">
+          <p class="menu-Label">ABR, Inc.</p>
+          <ul class="vertical-menu">
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/products/">Products</a></li>
+            <li class="footer-listitem-new "><a href="https://appliedbrainresearch.com/services/">Services</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/research/">Research</a></li>
+          </ul>
+        </div>
+        <div class="w-col w-col-2 footer-menu">
+          <p class="menu-Label">About Us</p>
+          <ul class="vertical-menu">
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/">Contact</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/#team">Team</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/#culture">Culture</a></li>
+          </ul>
+        </div>
+        <a class="brand footer-brand" href="https://appliedbrainresearch.com">
+          <img src="https://appliedbrainresearch.com/img/logo-light-notext.svg" width="80">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

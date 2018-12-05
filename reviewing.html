@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Reviewer guide &#8212; Nengo</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/components.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/nengo.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+<script type="text/javascript" src="https://cdn.crate.io/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/modernizr.js"></script>
+    <script type="text/javascript" src="_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/searchtools.js"></script>
+    <script type="text/javascript" src="_static/js/webflow.js"></script>
+    <script type="text/javascript" src="_static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="_static/js/mmenu.all.min.js"></script>
+    <script type="text/javascript" src="_static/js/fontawesome.js"></script>
+    <script type="text/javascript" src="_static/js/custom.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Making Python releases" href="releasing.html" />
+    <link rel="prev" title="Governance" href="governance.html" />
+<link rel="stylesheet" type="text/css" href="_static/custom.css">
+
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+<header class="header-nav">
+  <div class="container">
+    <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
+      <a class="brand w-nav-brand" href="https://www.nengo.ai/">
+        <img src="https://www.nengo.ai/design/_images/general-full-light.svg" width="120">
+      </a>
+      <nav class="w-nav-menu main-nav" role="navigation">
+        <div class="dropdownBackground">
+          <span class="arrow"></span>
+        </div>
+        <ul id="menu-top-navigation" class="menu">
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/overview.html">Overview</a>
+            <ul class="sub-menu">
+                <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
+            <table class="sub-menu">
+              <tr>
+                <td class="menu-heading">Core</td>
+                <td class="menu-heading">Backends</td>
+                <td class="menu-heading">Add-ons</td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo">Nengo</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-fpga">Nengo FPGA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-examples">Nengo Examples</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-dl/">Nengo DL</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-loihi">Nengo Loihi</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-extras/">Nengo Extras</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-gui">Nengo GUI</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-mpi">Nengo MPI</a></td>
+                <td class="menu-item"><a href="https://arvoelke.github.io/nengolib-docs/">Nengo Lib</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-spa/">Nengo SPA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-ocl">Nengo OpenCL</a></td>
+                <td class="menu-item"></td>
+              </tr>
+              <tr>
+                <td class="menu-item"></td>
+                <td class="menu-item"><a href="https://github.com/project-rig/nengo_spinnaker">Nengo SpiNNaker</a></td>
+                <td class="menu-item"></td>
+              </tr>
+            </table>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/community.html">Community</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/publications.html">Publications</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/videos.html">Videos</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/projects.html">Development</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
+        </ul>
+      </nav>
+
+      <div id="mobile-nav" class="mm-menu">
+        <ul class="offcanvas-menu">
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/overview.html">Overview</a></li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
+              <li class="menu-item"><a href="http://www.nengo.ai/nengo">NengoCore</a></li>
+              <li class="menu-item"><a href="https://github.com/nengo/nengo-gui#nengo-gui">NengoGUI</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/community.html">Community</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/projects.html">Development</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
+        </ul>
+      </div>
+
+      <a href="#mobile-nav" class="fa fa-bars mobile-nav-button"></a>
+    </div>
+  </div>
+</header>
+
+<div class="w-section section border-top">
+  <div class="container">
+    <div class="row" id="reviewing">
+      <div class="col-md-4 col-lg-3">
+        <aside class="wrapper-navleft"><div role="complementary" class="bs-docs-sidebar hidden-print" id="nav-affix">
+  <ul class="bs-docs-sidenav bs-sidenav nav" role="complementary">
+    <a href="index.html">
+      Nengo
+    </a>
+    <ul class="toctree nav nav-list">
+      <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contributing.html">Contributor guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="how-to.html">Making Nengo contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html">Nengo Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html">Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance.html">Governance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Reviewer guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#guidelines">Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#becoming-a-reviewer">Becoming a reviewer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reviewing-a-pull-request">Reviewing a pull request</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="releasing.html">Making Python releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caa.html">Nengo Contributor Assignment Agreement</a></li>
+</ul>
+</li>
+</ul>
+
+    </ul>
+  </ul>
+</div>
+          
+        </aside>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <div class="wrapper-content-right">
+          
+          
+  <div class="section" id="reviewer-guide">
+<h1>Reviewer guide<a class="headerlink" href="#reviewer-guide" title="Permalink to this headline">¶</a></h1>
+<p>The Nengo team has
+varying backgrounds in software development,
+neuroscience, machine learning, and many other areas.
+We rely on each other to review our work
+and ensure that our code is
+correct, consistent, and documented.
+Every pull request (PR) is reviewed by at least one person,
+though usually two.</p>
+<div class="section" id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Permalink to this headline">¶</a></h2>
+<p>We expect reviewers to be respectful, kind,
+and to focus on the code and not the author of the code.
+Even when we mean well,
+words on a screen don’t always convey the right tone.
+We’ve found these guidelines to be helpful
+for keeping the tone positive.</p>
+<ul class="simple">
+<li>Accept that many programming decisions are opinions.
+Discuss tradeoffs, which you prefer, and reach a resolution quickly.</li>
+<li>Ask questions; don’t make demands.
+(“What do you think about naming this <code class="docutils literal notranslate"><span class="pre">n_neurons</span></code>?”)</li>
+<li>Ask for clarification. (“I don’t understand this line. Can you clarify?”)</li>
+<li>Avoid selective ownership of code. (“mine”, “not mine”, “yours”)</li>
+<li>Avoid using terms that could be seen as referring to personal traits
+(“dumb”, “stupid”).
+Assume everyone is attractive, intelligent, and well-meaning.</li>
+<li>Be explicit. People may not understand your intentions.</li>
+<li>Be humble. (“I’m not sure—let’s look it up.”)</li>
+<li>Don’t use hyperbole (“always”, “never”, “endlessly”, “nothing”).</li>
+<li>Be careful about the use of sarcasm.
+What seems like good-natured ribbing to you
+and a long-time colleague might come off
+as mean and unwelcoming to a person new to the project.</li>
+<li>Move to one-on-one chats or video calls
+if there are too many “I didn’t understand”
+or “Alternative solution:” comments.
+Post a follow-up comment summarizing the offline discussion.</li>
+</ul>
+</div>
+<div class="section" id="becoming-a-reviewer">
+<h2>Becoming a reviewer<a class="headerlink" href="#becoming-a-reviewer" title="Permalink to this headline">¶</a></h2>
+<p>Any Nengo contributor can volunteer to be a reviewer.
+Head to the <a class="reference external" href="https://github.com/orgs/nengo/teams">list of Nengo teams</a>
+and request to join
+the <a class="reference external" href="https://github.com/orgs/nengo/teams/active-reviewers">Active reviewers team</a>.
+If you’ve contributed to a Nengo project,
+then its maintainer will assign you reviews
+based on your contributions thus far.</p>
+<p>You will be assigned
+at most two reviews concurrently.
+The reviews currently assigned to you
+can be viewed <a class="reference external" href="https://github.com/pulls/review-requested">here</a>.
+Please respond to review requests within a week.
+If you cannot review within a week,
+please let the <a class="reference internal" href="projects.html#nengo-ecosystem"><span class="std std-ref">project maintainer</span></a>
+know so that they can assign the review to someone else.</p>
+</div>
+<div class="section" id="reviewing-a-pull-request">
+<h2>Reviewing a pull request<a class="headerlink" href="#reviewing-a-pull-request" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Read through the code changes and commit messages.</li>
+<li>Test that the PR does what it claims to do.</li>
+<li>Make commits to propose changes.</li>
+<li>Submit a Github review.</li>
+</ol>
+<p>If any of the above steps are unclear, read on.</p>
+<div class="section" id="reading-code-changes">
+<h3>1. Reading code changes<a class="headerlink" href="#reading-code-changes" title="Permalink to this headline">¶</a></h3>
+<p>Reading through code changes (often called diffs)
+is a skill that takes a fair bit
+of practice—but the only way to practice is by doing it!
+A useful exercise when starting out is to read diffs
+for new PRs even if you aren’t assigned to review that PR.</p>
+<p>There are two ways to read code diffs.</p>
+<ol class="arabic">
+<li><p class="first">Read the diff of the entire PR.</p>
+<p>In Github, this is found in the “Files changed” tab of the PR.
+This works best for quick and average length PRs
+that change only one area of the codebase.</p>
+</li>
+<li><p class="first">Read the diff commit-by-commit.</p>
+<p>In Github, this is found in the “Commits” tabs of the PR.
+There are links in each commit to the previous and next commits
+to make reading the diff easier.
+This works best for lengthy PRs,
+or average length PRs that change multiple areas
+of the codebase.</p>
+</li>
+</ol>
+<p>In general, start by looking at the diff of the entire PR.
+If it’s difficult to read,
+switch to reading the diff commit-by-commit.
+If reading the diff commit-by-commit is difficult,
+then ask the PR author to make the history of the PR easier to read.</p>
+<p>In reading through the code diff:</p>
+<ul class="simple">
+<li>Try to be thorough to reduce the number of iterations.</li>
+<li>Seek to understand the author’s perspective.</li>
+<li>Identify ways to simplify the code while still solving the problem.</li>
+<li>If you don’t understand a piece of code, say so.
+There’s a good chance someone else would be confused by it as well.</li>
+</ul>
+</div>
+<div class="section" id="testing-the-pr">
+<h3>2. Testing the PR<a class="headerlink" href="#testing-the-pr" title="Permalink to this headline">¶</a></h3>
+<p>In general, we rely on automated testing to ensure that
+the code introduced in a PR works as advertised.</p>
+<ul class="simple">
+<li>For new features, the PR should include tests
+to ensure the new code is correct.</li>
+<li>For bugfixes, the PR should include a test that fails
+without the changes in the PR.</li>
+<li>For refactorings, optimizations, and other improvements
+that do not fix bugs or add new features,
+existing tests should cover the new code.</li>
+</ul>
+<p>In all of these cases,
+run the appropriate parts of the test suite locally
+to ensure that the tests pass.</p>
+<p>If the PR does not include tests,
+we encourage you to add those tests
+as a part of your review.
+Adding tests helps you understand the PR better,
+and helps everyone in the project
+by ensuring the codebase works as expected.
+However, if you do not have time to write tests,
+requesting that they be added
+is a valid resolution to a review.</p>
+</div>
+<div class="section" id="making-commits-to-propose-changes">
+<h3>3. Making commits to propose changes<a class="headerlink" href="#making-commits-to-propose-changes" title="Permalink to this headline">¶</a></h3>
+<p>Instead of asking the PR author to make changes,
+we prefer reviewers make commits
+to propose changes to a PR.
+Commits allow the reviewer to propose explicit
+changes that the PR author can say yes or no to,
+rather than placing the burden on the PR author
+and allowing for miscommunication.</p>
+<p>There are three types of commits that reviewers can add,
+depending on the type of change proposed.</p>
+<ol class="arabic">
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">fixup</span></code> commits should be used for minor changes
+like style fixes, moving code from one location to another,
+and fixing small bugs.
+In the end, your <code class="docutils literal notranslate"><span class="pre">fixup</span></code> commit will not appear in
+the history of the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
+<p>To make a <code class="docutils literal notranslate"><span class="pre">fixup</span></code> commit, make your changes, then</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add -A
+git commit --fixup &lt;commit&gt;
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">&lt;commit&gt;</span></code> corresponds to the commit
+that your <code class="docutils literal notranslate"><span class="pre">fixup</span></code> commit modifies
+(e.g., <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">6be9830</span></code>).</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">squash</span></code> commits should be used for minor changes
+that require some explanation.
+In the end, your <code class="docutils literal notranslate"><span class="pre">squash</span></code> commit will not appear in
+the history of the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch,
+except in one or more commit messages.</p>
+<p>To make a <code class="docutils literal notranslate"><span class="pre">squash</span></code> commit, make your changes, then</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add -A
+git commit --squash &lt;commit hash&gt;
+</pre></div>
+</div>
+<p>Unlike with the <code class="docutils literal notranslate"><span class="pre">--fixup</span></code> option, git will now prompt you
+to enter a message to explain what your <code class="docutils literal notranslate"><span class="pre">squash</span></code> commit does.
+Since <code class="docutils literal notranslate"><span class="pre">squash</span></code> commits contain a commit message,
+maintainers will review the message when merging
+that branch into <code class="docutils literal notranslate"><span class="pre">master</span></code> and incorporate it in
+the squashed commit message if appropriate.</p>
+</li>
+<li><p class="first">Normal commits should be used for major changes
+that should be reflected in the git history post-merge.
+If you’re not sure whether it should be in the history,
+make a normal commit anyway
+as the maintainer will reorganize history as they see fit.</p>
+</li>
+</ol>
+<p>Please note that
+all commits should be made at the end of the branch!
+The history of the PR branch should not be rewritten
+until it is being merged.</p>
+</div>
+<div class="section" id="submitting-a-github-review">
+<h3>4. Submitting a Github review<a class="headerlink" href="#submitting-a-github-review" title="Permalink to this headline">¶</a></h3>
+<p>Once you’ve looked over the code
+and made your changes,
+finalize your review by submitting it through Github.</p>
+<ol class="arabic">
+<li><p class="first">Click on the “Files changed” tab
+underneath the title of the PR.</p>
+</li>
+<li><p class="first">If you wish to point out specific changes that you made,
+or specific parts of the code that need improvement,
+<a class="reference external" href="https://help.github.com/assets/images/help/commits/hover-comment-icon.gif">make an inline comment</a>.
+With your first inline comment,
+click on the green “Start a review” button.</p>
+</li>
+<li><p class="first">Once you’ve left all your comments,
+click on the “Review changes” button at the top-right of the page.</p>
+</li>
+<li><p class="first">Write a review summary. This is <strong>not</strong> optional!</p>
+<p>The summary is a good place to sum up your thoughts on the PR
+and be explicit about next steps.
+Even if you’ve left lots of nitpicky inline comments,
+the tone of the review can be positive with a supportive review summary
+(e.g., “I made lots of little style fixes,
+but this improves the widget implementation significantly!”).</p>
+</li>
+<li><p class="first">Decide to approve the PR or request changes,
+and click “Submit review”.</p>
+</li>
+</ol>
+<p>When writing feedback in comments or the review summary,
+clearly communicate when you feel strongly about a change,
+and when you are okay with the PR without that change.
+Offer alternative implementations,
+but assume the author has already considered them.</p>
+<p>Keep in mind that there is a difference
+in doing things right and doing things right now.
+Ideally, we should do things right,
+but a suboptimal PR often better than no PR at all.
+Asking the PR author to do major refactoring
+in the pull request is a big ask.
+These things can always happen later,
+unless you feel strongly that
+the current design
+will cause serious problems in the future.</p>
+</div>
+</div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer">
+  <div class="w-container">
+    <div class="w-clearfix">
+      <div class="w-row mobileAlign">
+        <div class="w-col w-col-2 footer-menu">
+          <p class="menu-Label">ABR, Inc.</p>
+          <ul class="vertical-menu">
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/products/">Products</a></li>
+            <li class="footer-listitem-new "><a href="https://appliedbrainresearch.com/services/">Services</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/research/">Research</a></li>
+          </ul>
+        </div>
+        <div class="w-col w-col-2 footer-menu">
+          <p class="menu-Label">About Us</p>
+          <ul class="vertical-menu">
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/">Contact</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/#team">Team</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/#culture">Culture</a></li>
+          </ul>
+        </div>
+        <a class="brand footer-brand" href="https://appliedbrainresearch.com">
+          <img src="https://appliedbrainresearch.com/img/logo-light-notext.svg" width="80">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

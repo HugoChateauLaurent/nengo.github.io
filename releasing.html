@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Making Python releases &#8212; Nengo</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/components.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/nengo.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+<script type="text/javascript" src="https://cdn.crate.io/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/modernizr.js"></script>
+    <script type="text/javascript" src="_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/searchtools.js"></script>
+    <script type="text/javascript" src="_static/js/webflow.js"></script>
+    <script type="text/javascript" src="_static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="_static/js/mmenu.all.min.js"></script>
+    <script type="text/javascript" src="_static/js/fontawesome.js"></script>
+    <script type="text/javascript" src="_static/js/custom.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Nengo Contributor Assignment Agreement" href="caa.html" />
+    <link rel="prev" title="Reviewer guide" href="reviewing.html" />
+<link rel="stylesheet" type="text/css" href="_static/custom.css">
+
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+<header class="header-nav">
+  <div class="container">
+    <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
+      <a class="brand w-nav-brand" href="https://www.nengo.ai/">
+        <img src="https://www.nengo.ai/design/_images/general-full-light.svg" width="120">
+      </a>
+      <nav class="w-nav-menu main-nav" role="navigation">
+        <div class="dropdownBackground">
+          <span class="arrow"></span>
+        </div>
+        <ul id="menu-top-navigation" class="menu">
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/overview.html">Overview</a>
+            <ul class="sub-menu">
+                <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
+            <table class="sub-menu">
+              <tr>
+                <td class="menu-heading">Core</td>
+                <td class="menu-heading">Backends</td>
+                <td class="menu-heading">Add-ons</td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo">Nengo</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-fpga">Nengo FPGA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-examples">Nengo Examples</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-dl/">Nengo DL</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-loihi">Nengo Loihi</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-extras/">Nengo Extras</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-gui">Nengo GUI</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-mpi">Nengo MPI</a></td>
+                <td class="menu-item"><a href="https://arvoelke.github.io/nengolib-docs/">Nengo Lib</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-spa/">Nengo SPA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-ocl">Nengo OpenCL</a></td>
+                <td class="menu-item"></td>
+              </tr>
+              <tr>
+                <td class="menu-item"></td>
+                <td class="menu-item"><a href="https://github.com/project-rig/nengo_spinnaker">Nengo SpiNNaker</a></td>
+                <td class="menu-item"></td>
+              </tr>
+            </table>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/community.html">Community</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/publications.html">Publications</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/videos.html">Videos</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/projects.html">Development</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
+        </ul>
+      </nav>
+
+      <div id="mobile-nav" class="mm-menu">
+        <ul class="offcanvas-menu">
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/overview.html">Overview</a></li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
+              <li class="menu-item"><a href="http://www.nengo.ai/nengo">NengoCore</a></li>
+              <li class="menu-item"><a href="https://github.com/nengo/nengo-gui#nengo-gui">NengoGUI</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/community.html">Community</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/projects.html">Development</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
+        </ul>
+      </div>
+
+      <a href="#mobile-nav" class="fa fa-bars mobile-nav-button"></a>
+    </div>
+  </div>
+</header>
+
+<div class="w-section section border-top">
+  <div class="container">
+    <div class="row" id="releasing">
+      <div class="col-md-4 col-lg-3">
+        <aside class="wrapper-navleft"><div role="complementary" class="bs-docs-sidebar hidden-print" id="nav-affix">
+  <ul class="bs-docs-sidenav bs-sidenav nav" role="complementary">
+    <a href="index.html">
+      Nengo
+    </a>
+    <ul class="toctree nav nav-list">
+      <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contributing.html">Contributor guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="how-to.html">Making Nengo contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html">Nengo Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html">Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="governance.html">Governance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewing.html">Reviewer guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Making Python releases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stage-1-preparing">Stage 1: Preparing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stage-2-releasing">Stage 2: Releasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stage-3-cleaning-up">Stage 3: Cleaning up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stage-4-announcing">Stage 4: Announcing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="caa.html">Nengo Contributor Assignment Agreement</a></li>
+</ul>
+</li>
+</ul>
+
+    </ul>
+  </ul>
+</div>
+          
+        </aside>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <div class="wrapper-content-right">
+          
+          
+  <div class="section" id="making-python-releases">
+<h1>Making Python releases<a class="headerlink" href="#making-python-releases" title="Permalink to this headline">¶</a></h1>
+<p>There are three stages to this process,
+which will result in at least
+two <code class="docutils literal notranslate"><span class="pre">git</span></code> commits and one <code class="docutils literal notranslate"><span class="pre">git</span></code> tag.</p>
+<div class="section" id="stage-1-preparing">
+<h2>Stage 1: Preparing<a class="headerlink" href="#stage-1-preparing" title="Permalink to this headline">¶</a></h2>
+<p>Before making a release,
+we do a few things to prepare:</p>
+<ol class="arabic">
+<li><p class="first">Ensure <code class="docutils literal notranslate"><span class="pre">master</span></code> is up-to-date by doing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code>.</p>
+</li>
+<li><p class="first">Run <a class="reference external" href="https://pypi.python.org/pypi/check-manifest">check-manifest</a>
+to ensure that all files are included in the release.</p>
+</li>
+<li><p class="first">Run all tests to ensure they pass on all supported platforms,
+including slow tests that are normally skipped.
+The exact command will depend on the repository,
+but for Nengo core it’s</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest --pyargs nengo --plots --analytics --logs --slow
+</pre></div>
+</div>
+</li>
+<li><p class="first">Review all of the outputs (e.g., plots)
+generated from the test suite for abnormalities.</p>
+</li>
+<li><p class="first">Run all tests for projects that depend on your project.
+For example, Nengo OCL depends on Nengo core
+so we run those tests with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest --pyargs nengo --plots --simulator nengo_ocl.Simulator
+</pre></div>
+</div>
+<p>If any tests fail, attempt to fix them in your project.
+If they cannot be fixed and require upstream changes,
+then file an issue with that project or contact its maintainer
+to determine how to proceed.</p>
+</li>
+<li><p class="first">Build documentation and review it for abnormalities.</p>
+</li>
+<li><p class="first">Commit all changes from the above steps before moving on to the next stage.</p>
+</li>
+</ol>
+<p>Note that any fixes done as a result of
+Stage 1 should be done through the normal process of making
+a pull request and going through review.
+However, from Stage 2 onward, the work is done directly
+on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.
+Proceed with caution!</p>
+</div>
+<div class="section" id="stage-2-releasing">
+<h2>Stage 2: Releasing<a class="headerlink" href="#stage-2-releasing" title="Permalink to this headline">¶</a></h2>
+<p>Once everything is prepared, we’re ready to do the release.
+It should be okay to work in the same directory that you
+do development, but if you want to be extra safe,
+you can do a fresh clone of the repository
+into a separate directory.</p>
+<ol class="arabic">
+<li><p class="first">Change the version information for your project.
+For most Python projects, it lives in <code class="docutils literal notranslate"><span class="pre">project/version.py</span></code>.
+See that file for details.</p>
+</li>
+<li><p class="first">Set the release date in the changelog (usually <code class="docutils literal notranslate"><span class="pre">CHANGES.rst</span></code>).</p>
+</li>
+<li><p class="first">Run <code class="docutils literal notranslate"><span class="pre">collective.checkdocs</span></code> to ensure proper formatting for PyPI.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py checkdocs
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> the changes above and make a release commit with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;Release version X.Y.Z&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Create release packages.
+We build source distributions and wheels whenever possible.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py sdist bdist_wheel
+</pre></div>
+</div>
+</li>
+<li><p class="first">Review the release packages to ensure extra files
+(like those in <code class="docutils literal notranslate"><span class="pre">.ipynb_checkpoints</span></code>) are not included.
+The size of the package is a good indication of whether
+extra files are present.</p>
+</li>
+<li><p class="first">Upload the release packages to PyPI.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>twine upload dist/&lt;package-version&gt;.tar.gz
+twine upload dist/&lt;package-version-extratags&gt;.whl
+</pre></div>
+</div>
+</li>
+<li><p class="first">Tag the release commit with the version number; i.e.,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag -a vX.Y.Z
+</pre></div>
+</div>
+<p>We use annotated tags for the authorship information;
+if you wish to provide a message with information about the release,
+feel free, but it is not necessary.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code> and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">vX.Y.Z</span></code>.
+Pushing the tag will trigger a build and deployment of the documentation.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="stage-3-cleaning-up">
+<h2>Stage 3: Cleaning up<a class="headerlink" href="#stage-3-cleaning-up" title="Permalink to this headline">¶</a></h2>
+<p>Your project is now released!
+We need to do a few last things to
+put it back in a development state.</p>
+<ol class="arabic">
+<li><p class="first">Change the version information in <code class="docutils literal notranslate"><span class="pre">project/version.py</span></code>.
+See that file for details.</p>
+</li>
+<li><p class="first">Make a new changelog section in <code class="docutils literal notranslate"><span class="pre">CHANGES.rst</span></code>
+in order to collect changes for the next release.</p>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> the changes above and make a commit describing
+the current state of the repository and commit with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;Starting development of vX.Y.Z&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">master</span></code></p>
+</li>
+</ol>
+</div>
+<div class="section" id="stage-4-announcing">
+<h2>Stage 4: Announcing<a class="headerlink" href="#stage-4-announcing" title="Permalink to this headline">¶</a></h2>
+<p>Now we have to let the world know about the new release.
+We do this in two ways for each release.</p>
+<ol class="arabic">
+<li><p class="first">Copy the changelog into the tag details on the
+Github release tab.
+Note that the changelog is in reStructuredText,
+while Github expects Markdown.
+Use <a class="reference external" href="http://pandoc.org/try/">Pandoc</a> or a similar tool
+to convert between the two formats.
+For Pandoc, we recommend the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pandoc -t markdown_github -f rst+hard_line_breaks CHANGES.rst
+</pre></div>
+</div>
+</li>
+<li><p class="first">Write a release announcement.
+Generally, it’s easiest to start from
+the last release announcement
+and change it to make sense with the current release
+so that the overall template of each announcement is similar.</p>
+</li>
+</ol>
+<p>All release announcements should be posted
+on the <a class="reference external" href="https://forum.nengo.ai/c/general/announcements">forum</a>
+and on the <a class="reference external" href="http://appliedbrainresearch.com/">ABR website</a>.</p>
+<p>For a major release
+(e.g., the first release of a new backend,
+or a milestone release like 1.0),
+consider writing a more general and
+elaborate announcement and posting it to wider-reaching venues, such as
+<a class="reference external" href="http://www.tnb.ua.ac.be/mailman/listinfo/comp-neuro">the comp-neuro mailing list</a>,
+<a class="reference external" href="https://planet.scipy.org/">Planet SciPy</a>,
+and <a class="reference external" href="http://planetpython.org/">Planet Python</a>.</p>
+</div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer">
+  <div class="w-container">
+    <div class="w-clearfix">
+      <div class="w-row mobileAlign">
+        <div class="w-col w-col-2 footer-menu">
+          <p class="menu-Label">ABR, Inc.</p>
+          <ul class="vertical-menu">
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/products/">Products</a></li>
+            <li class="footer-listitem-new "><a href="https://appliedbrainresearch.com/services/">Services</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/research/">Research</a></li>
+          </ul>
+        </div>
+        <div class="w-col w-col-2 footer-menu">
+          <p class="menu-Label">About Us</p>
+          <ul class="vertical-menu">
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/">Contact</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/#team">Team</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/#culture">Culture</a></li>
+          </ul>
+        </div>
+        <a class="brand footer-brand" href="https://appliedbrainresearch.com">
+          <img src="https://appliedbrainresearch.com/img/logo-light-notext.svg" width="80">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

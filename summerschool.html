@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Nengo summer school &#8212; Nengo</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/mmenu.all.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/components.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/nengo.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+<script type="text/javascript" src="https://cdn.crate.io/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/modernizr.js"></script>
+    <script type="text/javascript" src="_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/searchtools.js"></script>
+    <script type="text/javascript" src="_static/js/webflow.js"></script>
+    <script type="text/javascript" src="_static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="_static/js/mmenu.all.min.js"></script>
+    <script type="text/javascript" src="_static/js/fontawesome.js"></script>
+    <script type="text/javascript" src="_static/js/custom.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<link rel="stylesheet" type="text/css" href="_static/custom.css">
+
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+<header class="header-nav">
+  <div class="container">
+    <div class="navbar w-nav" data-animation="default" data-collapse="small" data-contain="1" data-duration="400">
+      <a class="brand w-nav-brand" href="https://www.nengo.ai/">
+        <img src="https://www.nengo.ai/design/_images/general-full-light.svg" width="120">
+      </a>
+      <nav class="w-nav-menu main-nav" role="navigation">
+        <div class="dropdownBackground">
+          <span class="arrow"></span>
+        </div>
+        <ul id="menu-top-navigation" class="menu">
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/overview.html">Overview</a>
+            <ul class="sub-menu">
+                <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
+            <table class="sub-menu">
+              <tr>
+                <td class="menu-heading">Core</td>
+                <td class="menu-heading">Backends</td>
+                <td class="menu-heading">Add-ons</td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo">Nengo</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-fpga">Nengo FPGA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-examples">Nengo Examples</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-dl/">Nengo DL</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-loihi">Nengo Loihi</a></td>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-extras/">Nengo Extras</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-gui">Nengo GUI</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-mpi">Nengo MPI</a></td>
+                <td class="menu-item"><a href="https://arvoelke.github.io/nengolib-docs/">Nengo Lib</a></td>
+              </tr>
+              <tr>
+                <td class="menu-item"><a href="https://www.nengo.ai/nengo-spa/">Nengo SPA</a></td>
+                <td class="menu-item"><a href="https://github.com/nengo/nengo-ocl">Nengo OpenCL</a></td>
+                <td class="menu-item"></td>
+              </tr>
+              <tr>
+                <td class="menu-item"></td>
+                <td class="menu-item"><a href="https://github.com/project-rig/nengo_spinnaker">Nengo SpiNNaker</a></td>
+                <td class="menu-item"></td>
+              </tr>
+            </table>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/community.html">Community</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/publications.html">Publications</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/videos.html">Videos</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/projects.html">Development</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
+        </ul>
+      </nav>
+
+      <div id="mobile-nav" class="mm-menu">
+        <ul class="offcanvas-menu">
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/overview.html">Overview</a></li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/documentation.html">Documentation</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/quickstart.html">Quick Start</a></li>
+              <li class="menu-item"><a href="http://www.nengo.ai/nengo">NengoCore</a></li>
+              <li class="menu-item"><a href="https://github.com/nengo/nengo-gui#nengo-gui">NengoGUI</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/community.html">Community</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://forum.nengo.ai/">Forum</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/summerschool.html">Summer School</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/people.html">People</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item menu-item-has-children">
+            <a href="https://www.nengo.ai/projects.html">Development</a>
+            <ul class="sub-menu">
+              <li class="menu-item"><a href="https://www.nengo.ai/contributing.html">Contributor Guide</a></li>
+              <li class="menu-item"><a href="https://www.nengo.ai/projects.html">Ecosystem</a></li>
+            </ul>
+          </li>
+          <li class="navlink w-nav-link menu-item"><a href="https://www.nengo.ai/README.html">About</a></li>
+          <li class="btn-link w-nav-link menu-item"><a href="https://www.nengo.ai/download.html">Download</a></li>
+        </ul>
+      </div>
+
+      <a href="#mobile-nav" class="fa fa-bars mobile-nav-button"></a>
+    </div>
+  </div>
+</header>
+
+<div class="w-section section border-top">
+  <div class="container">
+    <div class="row" id="summerschool">
+      <div class="col-md-4 col-lg-3">
+        <aside class="wrapper-navleft">
+          
+        </aside>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <div class="wrapper-content-right">
+          
+          
+  <div class="section" id="nengo-summer-school">
+<h1>Nengo summer school<a class="headerlink" href="#nengo-summer-school" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>2019<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/summerschool-campus.png"><img alt="_images/summerschool-campus.png" src="_images/summerschool-campus.png" style="width: 100%;" /></a>
+<p><strong>Nengo with Loihi:</strong></p>
+<p>The Centre for Theoretical Neuroscience
+at the University of Waterloo is excited
+to announce our 6th annual Nengo summer school
+on large-scale brain modelling and neuromorphic computing.
+As a special feature of this year’s school,
+participants will be given on-site access to
+<a class="reference external" href="https://ieeexplore.ieee.org/document/8259423">Loihi</a>,
+a neuromorphic research chip developed by Intel Labs.
+Other neuromorphic devices likely to be available at the
+summer school include Stanford’s mixed digital/analog
+chip <a class="reference external" href="https://web.stanford.edu/group/brainsinsilicon/">Braindrop</a>,
+and <a class="reference external" href="http://apt.cs.manchester.ac.uk/projects/SpiNNaker/">SpiNNaker</a>.</p>
+<p>In addition to teaching participants to run applications
+on Loihi using the Nengo simulation package,
+this two-week school will teach participants to use
+Nengo to build state-of-the-art cognitive and neural models.
+More generally, Nengo provides users
+with a versatile and powerful environment
+for designing cognitive and neural systems,
+and has been used to build what is currently
+the world’s largest functional brain model, Spaun,
+which includes spiking deep learning, reinforcement learning,
+adaptive motor control, and cognitive control networks.</p>
+<p>We welcome applications from all interested
+graduate students, postdocs,
+professors, and industry professionals.
+No specific training in the use of modelling software is required,
+but we encourage applications from active researchers
+with a relevant background in
+psychology, neuroscience, cognitive science,
+computer science, robotics, neuromorphic engineering,
+or a related field.
+More information about Nengo,
+the Neural Engineering Framework, and Spaun
+can be found at <a class="reference external" href="http://www.nengo.ai">http://www.nengo.ai</a>.
+Many of the concepts to be covered are in <a class="reference external" href="http://www.amazon.com/How-Build-Brain-Architecture-Architectures/dp/0199794545">this book</a>.</p>
+<p>Watch the videos below for a quick look at previous versions of the summer school!</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/NwtYgBB2N6I" frameborder="0" allowfullscreen></iframe><p><strong>Purpose:</strong>
+The main goal of the summer school is to have participants
+learn to build state-of-the-art neural or cognitive models using Nengo.
+Participants are encouraged
+to bring their own ideas for projects,
+which may focus on testing hypotheses,
+modelling neural or cognitive data,
+implementing specific behavioural functions with neurons,
+expanding past models,
+or provide a proof-of-concept of various neural mechanisms.
+Projects can be focused on software, hardware, or a combination of both.</p>
+<p><strong>Approach:</strong>
+Discussions during the school
+will help shape projects,
+develop new collaborations,
+and generate new ideas for projects.
+Participants will have the opportunity to learn how to:</p>
+<ul class="simple">
+<li>use Nengo to program neuromorphic hardware systems, including Loihi!</li>
+<li>build models through detailed hands-on tutorials</li>
+<li>build perceptual, motor, and cognitive models with spiking neurons</li>
+<li>simulate large-scale models at a variety of levels of detail concurrently</li>
+<li>model anatomical and electrophysiological data</li>
+<li>model cognitive and behavioural data with a detailed neural model</li>
+<li>use a variety of single cell models within a large-scale model</li>
+<li>use your favorite simulator, e.g. NEST, Brian, Neuron, etc.</li>
+<li>integrate machine learning methods into biologically oriented models</li>
+<li>interface Nengo with cameras and robotic systems of various kinds</li>
+<li>implement modern non-linear control methods in a neural model</li>
+<li>and much more…</li>
+</ul>
+<p><strong>Format:</strong>
+The first few days of the summer school
+will be be devoted to in-depth tutorials
+on using Nengo for neural and cognitive modelling.
+The rest of summer school
+will be devoted primarily to project work,
+with a variety of faculty guest lectures
+and optional tutorials scheduled throughout.
+A project demonstration and evening banquet
+will be held on the last day,
+with a variety of prizes for strong projects!
+The complete schedule and list of guest lecturers
+will be announced at a later date.</p>
+<p><strong>Dates:</strong>
+June 9th - June 21st, 2019</p>
+<p><strong>Location:</strong>
+University of Waterloo, Ontario, Canada (<a class="reference external" href="http://goo.gl/Sa074A">map</a>)</p>
+<p><strong>Cost:</strong>
+A registration fee is required of all participants
+(C$600 for academic participants; C$1200 for industry participants).</p>
+<p>This fee includes the cost of breakfast, lunch, and snacks
+during each weekday of the school,
+along with a summer school T-shirt!
+Some evening meals will also be covered.
+Participants are responsible for
+covering the cost of their travel, accommodations, and recreational activities.</p>
+<p><strong>Travel:</strong>
+For most participants,
+arrival through Toronto’s Pearson International Airport
+is the most convenient option.
+The University of Waterloo is approximately a one hour drive away,
+and a number of shuttle services are available
+to take you directly to the University from the airport.
+A list of general travel options can be found
+<a class="reference external" href="https://uwaterloo.ca/about/how-find-us/maps-and-directions">here</a>.</p>
+<p><strong>Accommodations:</strong>
+On-campus accommodations will be arranged for all confirmed participants.
+The summer school rates
+for these accommodations will be announced at a later date.</p>
+<p><strong>Applications:</strong>
+To apply, you will need to submit a CV and a brief proposal for a project.
+The application form is available
+<a class="reference external" href="https://goo.gl/forms/8h0wCYV6AKIFpIKF3">here</a>.</p>
+<p><strong>Application deadline:</strong>
+Applications are due on <strong>February 15th, 2019</strong>.</p>
+<p><strong>Contact information:</strong>
+For any questions,
+please contact <a class="reference external" href="mailto:peter&#46;blouw&#37;&#52;&#48;appliedbrainresearch&#46;com">Peter Blouw</a>.</p>
+</div>
+</div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div><footer class="footer">
+  <div class="w-container">
+    <div class="w-clearfix">
+      <div class="w-row mobileAlign">
+        <div class="w-col w-col-2 footer-menu">
+          <p class="menu-Label">ABR, Inc.</p>
+          <ul class="vertical-menu">
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/products/">Products</a></li>
+            <li class="footer-listitem-new "><a href="https://appliedbrainresearch.com/services/">Services</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/research/">Research</a></li>
+          </ul>
+        </div>
+        <div class="w-col w-col-2 footer-menu">
+          <p class="menu-Label">About Us</p>
+          <ul class="vertical-menu">
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/">Contact</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/#team">Team</a></li>
+            <li class="footer-listitem-new"><a href="https://appliedbrainresearch.com/about-us/#culture">Culture</a></li>
+          </ul>
+        </div>
+        <a class="brand footer-brand" href="https://appliedbrainresearch.com">
+          <img src="https://appliedbrainresearch.com/img/logo-light-notext.svg" width="80">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
