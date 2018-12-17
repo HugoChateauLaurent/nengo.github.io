@@ -14,20 +14,14 @@ see :ref:`here <Nengo ecosystem>`.
 
 Jump to documentation for:
 
-.. |nengocore| image:: https://www.nengo.ai/design/_images/general-full-light.svg
-   :height: 50
-   :alt: Nengo core
-   :target: https://www.nengo.ai/nengo
+.. |nengocore| replace:: Nengo
+.. _nengocore: https://github.com/nengo
 
-.. |nengodl| image:: https://www.nengo.ai/design/_images/nengo-dl-full-light.svg
-   :height: 50
-   :alt: NengoDL
-   :target: https://www.nengo.ai/nengo-dl/
+.. |nengodl| replace:: Nengo DL
+.. _nengodl: https://github.com/nengo/nengo-dl
 
-.. |nengospa| image:: https://www.nengo.ai/design/_images/nengo-spa-full-light.svg
-   :height: 50
-   :alt: Nengo SPA
-   :target: https://www.nengo.ai/nengo-spa/
+.. |nengospa| replace:: Nengo SPA
+.. _nengospa: https://github.com/nengo/nengo-spa
 
 .. |nengogui| replace:: Nengo GUI
 .. _nengogui: https://github.com/nengo/nengo-gui
@@ -56,15 +50,19 @@ Jump to documentation for:
 .. |nengoexamples| replace:: Nengo Examples
 .. _nengoexamples: https://github.com/nengo/nengo-examples
 
-+------------------+----------------+-------------------+
-| |nengocore|      | |nengodl|      | |nengospa|        |
-+------------------+----------------+-------------------+
-| |nengogui|_      | |nengoextras|_ | |nengolib|_       |
-+------------------+----------------+-------------------+
-| |nengofpga|_     | |nengoloihi|_  | |nengospinnaker|_ |
-+------------------+----------------+-------------------+
-| |nengoexamples|_ | |nengoocl|_    | |nengompi|_       |
-+------------------+----------------+-------------------+
++-----------------+-----------------------+----------------------+
+| Core            | Backends              | Add-ons              |
++=================+=======================+======================+
+| |nengocore|_    | |nengofpga|_          | |nengoexamples|_     |
++-----------------+-----------------------+----------------------+
+| |nengodl|_      | |nengoloihi|_         | |nengoextras|_       |
++-----------------+-----------------------+----------------------+
+| |nengogui|_     | |nengompi|_           | |nengolib|_          |
++-----------------+-----------------------+----------------------+
+| |nengospa|_     | |nengoocl|_           |                      |
++-----------------+-----------------------+----------------------+
+|                 | |nengospinnaker|_     |                      |
++-----------------+-----------------------+----------------------+
 
 A few additional resources:
 
