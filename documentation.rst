@@ -15,13 +15,13 @@ see :ref:`here <Nengo ecosystem>`.
 Jump to documentation for:
 
 .. |nengocore| replace:: Nengo
-.. _nengocore: https://github.com/nengo
+.. _nengocore: https://www.nengo.ai/nengo/
 
 .. |nengodl| replace:: Nengo DL
-.. _nengodl: https://github.com/nengo/nengo-dl
+.. _nengodl: https://www.nengo.ai/nengo-dl/
 
 .. |nengospa| replace:: Nengo SPA
-.. _nengospa: https://github.com/nengo/nengo-spa
+.. _nengospa: https://www.nengo.ai/nengo-spa/
 
 .. |nengogui| replace:: Nengo GUI
 .. _nengogui: https://github.com/nengo/nengo-gui
@@ -33,7 +33,7 @@ Jump to documentation for:
 .. _nengoextras: https://www.nengo.ai/nengo-extras/
 
 .. |nengofpga| replace:: Nengo FPGA
-.. _nengofpga: https://www.nengo.ai/nengo-fpga
+.. _nengofpga: https://www.nengo.ai/nengo-fpga/
 
 .. |nengoloihi| replace:: Nengo Loihi
 .. _nengoloihi: https://www.nengo.ai/nengo-loihi/
